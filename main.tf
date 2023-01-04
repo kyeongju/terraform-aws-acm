@@ -18,7 +18,7 @@ provider = var.provider
 
 resource "aws_acm_certificate" "this" {
   count = local.create_certificate ? 1 : 0
-  provider                  = try(local.provider, var.provider, "")
+  provider = aws.us
   domain_name               = var.domain_name
   subject_alternative_names = var.subject_alternative_names
   validation_method         = var.validation_method
