@@ -1,7 +1,3 @@
-variable "provider" {
-  description = "Whether to create ACM certificate"
-  type        = string
-}
 
 variable "create_certificate" {
   description = "Whether to create ACM certificate"
